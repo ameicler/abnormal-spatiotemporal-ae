@@ -30,7 +30,7 @@ ARG python_version=3.5
 
 RUN conda install -y python=${python_version} && \
     pip install --upgrade pip && \
-    pip install tensorflow-gpu && \
+    pip install tensorflow-gpu==1.4 && \
     pip install sk-video && \
     pip install tqdm coloredlogs && \
     pip install opencv-contrib-python && \
