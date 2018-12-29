@@ -30,12 +30,12 @@ ARG python_version=3.5
 
 RUN conda install -y python=${python_version} && \
     pip install --upgrade pip && \
-    pip install tensorflow-gpu==1.4 && \
+    pip install tensorflow-gpu==1.4.1 && \
     pip install sk-video && \
     pip install tqdm coloredlogs && \
     pip install opencv-contrib-python && \
     conda install -y Pillow scikit-learn scikit-image graphviz pydot notebook pandas matplotlib mkl nose pyyaml six h5py && \
-    pip install keras && \
+    pip install keras==2.1.2 && \
     conda clean -yt
 
 ENV PYTHONPATH='/src/:$PYTHONPATH'
